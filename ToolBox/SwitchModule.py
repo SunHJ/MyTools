@@ -77,8 +77,10 @@ class XmlSwitch(SwitchTemplate):
     def __init__(self, parent, statBar):
         SwitchTemplate.__init__(self, parent, statBar)
         
+        # <name>?</name>
         reg = r'<\s*(\w+)\s*>(.*?)<\s*/\s*(\1)\s*>'
         self.rePattern1 = re.compile(reg)
+        # <name />
         reg = r'<\s*(\w+)\s*/\s*>'
         self.rePattern2 = re.compile(reg)
     
@@ -93,10 +95,9 @@ class XmlSwitch(SwitchTemplate):
                 reStr = srcStr
         return reStr
 
-
 if __name__ == "__main__":
     app = wx.App(False)
-    frame = wx.Frame(None, title=u"SQL语句格式化", size=(640,480))
+    frame = wx.Frame(None, title=u"XML语句格式化", size=(640,480))
     statBar = frame.CreateStatusBar()
     SqlSwitch(frame, statBar)
     frame.Show()

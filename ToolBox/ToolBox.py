@@ -25,4 +25,3 @@ if __name__ == "__main__":
     frame = ToolBoxFrame()
     frame.Show()
     app.MainLoop()
-
