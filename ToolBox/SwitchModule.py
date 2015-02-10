@@ -78,19 +78,19 @@ class XmlSwitch(SwitchTemplate):
         SwitchTemplate.__init__(self, parent, statBar)
         
         # <name>?</name>
-        reg = r'<\s*(\w+)\s*>(.*?)<\s*/\s*(\1)\s*>'
+        reg = r'(\s*)<\s*(\w+)\s*>(.*?)<\s*/\s*(\2)\s*>'
         self.rePattern1 = re.compile(reg)
         # <name />
-        reg = r'<\s*(\w+)\s*/\s*>'
+        reg = r'(\s*)<\s*(\w+)\s*/\s*>'
         self.rePattern2 = re.compile(reg)
     
     def doAction(self, srcStr):
         reStr = ""
         if srcStr:
             if self.rePattern1.match(srcStr):
-                reStr = self.rePattern1.sub(r'<\1>A</\3>', srcStr)
+                reStr = self.rePattern1.sub(r'\1<\2>A</\4>', srcStr)
             elif self.rePattern2.match(srcStr):
-                reStr = self.rePattern2.sub(r'<\1>A</\1>', srcStr)
+                reStr = self.rePattern2.sub(r'\1<\2>A</\2>', srcStr)
             else:
                 reStr = srcStr
         return reStr
@@ -99,6 +99,7 @@ if __name__ == "__main__":
     app = wx.App(False)
     frame = wx.Frame(None, title=u"XML语句格式化", size=(640,480))
     statBar = frame.CreateStatusBar()
-    SqlSwitch(frame, statBar)
+    XmlSwitch(frame, statBar)
+#     SqlSwitch(frame, statBar)
     frame.Show()
     app.MainLoop()
