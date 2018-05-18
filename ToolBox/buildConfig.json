@@ -1,0 +1,17 @@
+{
+	"GoRoot": "/opt/golang/go1.10.1",
+	"GoPaths": [
+		"/root/workspace/gocode/openpackages",
+		"/root/workspace/gocode/myworkspaces"
+	],
+	"GoProjects": {
+		"clientbot": {
+			"Path": "/root/workspace/gocode/myworkspaces/src/clientbot",
+			"BuildArg": "-v -i"
+		},
+		"luaclientbot": {
+			"Path": "/root/workspace/gocode/myworkspaces/src/luaclientbot",
+			"BuildArg": "-v -i"
+		}
+	}
+}

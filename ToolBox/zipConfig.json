@@ -1,0 +1,54 @@
+{
+	"skynet": {
+		"root": "/root/workspace/srccode",
+		"name": "tiny_game_server",
+		"dst": "../releaseBin/server.zip",
+		"ziplist": {
+			"config": "file",
+			"run.sh": "file",
+			"luaclib": [
+				"protobuf.so",
+				"cjson.so"
+			],
+			"lualib": [
+				"const.lua",
+				"dispatcher.lua",
+				"gamebase.lua",
+				"log.lua",
+				"protobuf.lua",
+				"protopack.lua",
+				"utils.lua",
+				"roomlist.lua"
+			],
+			"proto": "all",
+			"service": "all",
+			"skynet": {
+				"cservice": "all",
+				"luaclib": "all",
+				"lualib": "all",
+				"service": "all",
+				"skynet": "file"
+			}
+		}
+	},
+	"robot": {
+		"root": "/root/workspace/gocode/myworkspaces/src/clientbot",
+		"name": "robot",
+		"dst": "../releaseBin/gamerobot.zip",
+		"ziplist": {
+			"account.set": "file",
+			"clientbot": "file"
+		}
+	},
+	"luarobot": {
+		"root": "/root/workspace/gocode/myworkspaces/src/luaclientbot",
+		"name": "luarobot",
+		"dst": "../releaseBin/gameluarobot.zip",
+		"ziplist": {
+			"account.set": "file",
+			"config.json": "file",
+			"luaclientbot": "file",
+			"luascripts": "all"
+		}
+	}
+}

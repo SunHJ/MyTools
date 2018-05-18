@@ -1,0 +1,36 @@
+{
+	"beijing": {
+		"host": "127.0.0.1",
+		"user": "root",
+		"pwd": "*****",
+		"sendConfig": {
+			"robot": {
+				"name": "gameluarobot.zip",
+				"local": "../releaseBin",
+				"remote": "/home/tinygame"
+			},
+			"server": {
+				"name": "server.zip",
+				"local": "../releaseBin",
+				"remote": "/home/tinygame"
+			}
+		}
+	},
+	"guangzhou":{
+		"host": "127.0.0.1",
+		"user": "root",
+		"pwd": "*****",
+		"sendConfig": {
+			"robot": {
+				"name": "gameluarobot.zip",
+				"local": "../releaseBin",
+				"remote": "/home/tinygame"
+			},
+			"server": {
+				"name": "server.zip",
+				"local": "../releaseBin",
+				"remote": "/home/tinygame"
+			}
+		}
+	}
+}
