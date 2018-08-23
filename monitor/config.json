@@ -1,0 +1,24 @@
+{
+	"ListenPort": 8000,
+	"HostName": "邮件主题",
+	"SmtpServer":"mail.xx.com",
+	"UserName": "name@xx.com",
+	"PassWord": "******",
+	"ToAddr":["recv1@xx.com", "recv2@xx.com"],
+	"Interval": 1,
+	"ServerConfig": {
+		"demo": {
+			"Path":"/root/*-*/-*-/",
+			"UpdatePath":"",
+			"ServerMap":{
+				"app": ["-config=config_dev"]
+			}
+		},
+		"Resource": {
+			"SrcPath": "",
+			"DstPath": "",
+			"CopyMap": {
+			} 
+		}
+	}
+}
